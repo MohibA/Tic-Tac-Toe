@@ -52,14 +52,14 @@ def current_turn(player):
     else:
         print("player two's turn.")
         
-    position = input('choose a position from 1-9')
+    position = int(input('choose a position from 1-9'))
 
     # set valid turn to false the run a while loop to check if input is betweein 1-9 and the spot is empty
     valid_turn = False
 
     while not valid_turn:
 
-        while position not in ['1','2','3','4','5','6','7','8','9']:
+        while position not in range(1,10):
             position = input('choose a position from 1-9')
 
         position = int(position) -1
